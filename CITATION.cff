@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "hbv-model: A standalone HBV rainfall-runoff model and SCE-UA calibration implementation"
+type: software
+authors:
+  - family-names: "Patil"
+    given-names: "Sopan"
+    orcid: "https://orcid.org/0000-0002-8575-5220"
+    affiliation: "Bangor University"
+version: 1.0.0
+date-released: "[DATE YOU CREATE THE GITHUB RELEASE, e.g. 2026-08-01]"
+repository-code: "https://github.com/sopanpatil/hbv-model"
+license: MIT
+keywords:
+  - hydrology
+  - rainfall-runoff modelling
+  - HBV
+  - SCE-UA
+  - hydrological model calibration
+references:
+  - type: article
+    authors:
+      - family-names: "Bergström"
+        given-names: "S."
+    title: "The HBV model – Its structure and applications"
+    year: 1992
+  - type: article
+    authors:
+      - family-names: "Lindström"
+        given-names: "G."
+      - family-names: "Johansson"
+        given-names: "B."
+      - family-names: "Persson"
+        given-names: "M."
+      - family-names: "Gardelin"
+        given-names: "M."
+      - family-names: "Bergström"
+        given-names: "S."
+    title: "Development and test of the distributed HBV-96 hydrological model"
+    journal: "Journal of Hydrology"
+    volume: 201
+    year: 1997
+    start: 272
+    end: 288
