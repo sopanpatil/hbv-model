@@ -40,5 +40,6 @@ If you use this code, please cite the archived release (see `CITATION.cff`).
 
 - Bergström, S. (1992). The HBV model – Its structure and applications. SMHI Reports RH, No. 4.
 - Duan, Q., Sorooshian, S., & Gupta, V. K. (1994). Optimal use of the SCE-UA global optimization method for calibrating watershed models. Journal of Hydrology, 158, 265–284.
+- Coxon, G., Zheng, Y., Barbedo, R., Cooper, H., Fileni, F., Fowler, H. J., Fry, M., Green, A., Gribbin, T., Harfoot, H., Lewis, E., Neto, G. G. R., Qiu, X., Salwey, S., & Wendt, D. E. (2026). CAMELS-GB v2: hydrometeorological time series and landscape attributes for 671 catchments in Great Britain. Earth System Science Data, 18, 4345–4371.
 - Gupta, H. V., Kling, H., Yilmaz, K. K., & Martinez, G. F. (2009). Decomposition of the mean squared error and NSE performance criteria. Journal of Hydrology, 377(1–2), 80–91.
 - Lindström, G., Johansson, B., Persson, M., Gardelin, M., & Bergström, S. (1997). Development and test of the distributed HBV-96 hydrological model. Journal of Hydrology, 201, 272–288.
