@@ -8,7 +8,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-8575-5220"
     affiliation: "Bangor University"
 version: 1.0.0
-date-released: "[DATE YOU CREATE THE GITHUB RELEASE, e.g. 2026-08-01]"
+date-released: "2026-07-17"
 repository-code: "https://github.com/sopanpatil/hbv-model"
 license: MIT
 keywords:
