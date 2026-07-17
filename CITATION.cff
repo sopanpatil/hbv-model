@@ -7,6 +7,12 @@ authors:
     given-names: "Sopan"
     orcid: "https://orcid.org/0000-0002-8575-5220"
     affiliation: "Bangor University"
+  - family-names: "Dallison"
+    given-names: "Richard"
+    orcid: "https://orcid.org/0000-0001-5673-1919"
+  - family-names: "Jahanshahi"
+    given-names: "Afshin"
+    orcid: "https://orcid.org/0000-0003-0221-0055"
 version: 1.0.0
 date-released: "2026-07-17"
 repository-code: "https://github.com/sopanpatil/hbv-model"
