@@ -4,16 +4,16 @@ title: "hbv-model: A standalone HBV rainfall-runoff model and SCE-UA calibration
 type: software
 authors:
   - family-names: "Patil"
-    given-names: "Sopan"
+    given-names: "Sopan D."
     orcid: "https://orcid.org/0000-0002-8575-5220"
     affiliation: "Bangor University"
   - family-names: "Dallison"
-    given-names: "Richard"
+    given-names: "Richard J. H."
     orcid: "https://orcid.org/0000-0001-5673-1919"
   - family-names: "Jahanshahi"
     given-names: "Afshin"
     orcid: "https://orcid.org/0000-0003-0221-0055"
-doi: "10.5281/zenodo.21406134"
+doi: "10.5281/zenodo.21406135"
 version: 1.0.0
 date-released: "2026-07-17"
 repository-code: "https://github.com/sopanpatil/hbv-model"
