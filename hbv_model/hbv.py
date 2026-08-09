@@ -28,9 +28,15 @@ def _hbv_run_numba(precip, temp, evap,
     UZ_out = np.zeros(n)
     LZ_out = np.zeros(n)
     ET_out = np.zeros(n)
+    Q0_out   = np.zeros(n)
+    Q1_out   = np.zeros(n)
+    Q2_out   = np.zeros(n)
+    MELT_out = np.zeros(n)
 
     for t in range(n):
         P, T, PE = precip[t], temp[t], evap[t]
+
+        melt = 0.0
 
         if T < TT:
             SP += P
@@ -98,8 +104,14 @@ def _hbv_run_numba(precip, temp, evap,
         LZ_out[t] = LZ
         ET_out[t]  = ETact
         Qsim[t]    = Q0 + Q1 + Q2
+        Q0_out[t]   = Q0
+        Q1_out[t]   = Q1
+        Q2_out[t]   = Q2
+        MELT_out[t] = melt
 
-    return Qsim, SM_out, SP_out, UZ_out, LZ_out, ET_out, SP, WC, SM, UZ, LZ
+    return (Qsim, SM_out, SP_out, UZ_out, LZ_out, ET_out,
+            Q0_out, Q1_out, Q2_out, MELT_out,
+            SP, WC, SM, UZ, LZ)
 
 
 @njit(cache=True)
@@ -188,8 +200,9 @@ class HBVModel:
 
         maxbas_int = int(round(p['MAXBAS']))
 
-        Qsim, SM_out, SP_out, UZ_out, LZ_out, ET_out, \
-            SP_f, WC_f, SM_f, UZ_f, LZ_f = _hbv_run_numba(
+        (Qsim, SM_out, SP_out, UZ_out, LZ_out, ET_out,
+         Q0_out, Q1_out, Q2_out, MELT_out,
+         SP_f, WC_f, SM_f, UZ_f, LZ_f) = _hbv_run_numba(
                 precip, temp, evap,
                 float(p['TT']),   float(p['CFMAX']), float(p['CFR']),  float(p['CWH']),
                 float(p['FC']),   float(p['LP']),    float(p['BETA']),
@@ -206,7 +219,8 @@ class HBVModel:
 
         states = {
             'SM': SM_out, 'SP': SP_out, 'UZ': UZ_out,
-            'LZ': LZ_out, 'ETact': ET_out, 'Qgen': Qsim
+            'LZ': LZ_out, 'ETact': ET_out, 'Qgen': Qsim,
+            'Q0': Q0_out, 'Q1': Q1_out, 'Q2': Q2_out, 'melt': MELT_out
         }
 
         return Q_routed, states
