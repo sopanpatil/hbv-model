@@ -13,9 +13,9 @@ authors:
   - family-names: "Jahanshahi"
     given-names: "Afshin"
     orcid: "https://orcid.org/0000-0003-0221-0055"
-doi: "10.5281/zenodo.21406135"
-version: 1.0.0
-date-released: "2026-07-17"
+doi: "10.5281/zenodo.21860981"
+version: 1.1.0
+date-released: "2026-08-09"
 repository-code: "https://github.com/sopanpatil/hbv-model"
 license: MIT
 keywords:
@@ -29,7 +29,7 @@ references:
     authors:
       - family-names: "Bergström"
         given-names: "S."
-    title: "The HBV model – Its structure and applications"
+    title: "The HBV model - Its structure and applications"
     year: 1992
   - type: article
     authors:
