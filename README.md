@@ -11,6 +11,7 @@ A standalone implementation of the HBV rainfall-runoff model (Bergström, 1992; 
 - `run_calibration_example.py` — a runnable example calibrating HBV against a single synthetic catchment.
 - `example_data/synthetic_catchment.csv` — a small, synthetic (not real) daily precipitation/temperature/PET/discharge time series, included purely so the example script runs immediately without requiring external data.
 - `calibrated_parameters.csv` — calibrated HBV parameter sets for 671 CAMELS-GB v2 catchments, one row per catchment. Columns: `gauge_id`; the 13 HBV parameters (`TT`, `CFMAX`, `CFR`, `CWH`, `FC`, `LP`, `BETA`, `K0`, `K1`, `K2`, `UZL`, `PERC`, `MAXBAS`); `calibration_kge` (KGE achieved over the calibration period, WY1990–2009); `validation_kge` (KGE achieved over the independent validation period, WY2010–2019); and `used_in_analysis` (boolean, `True` where `validation_kge >= 0.5`; 621 of 671 catchments are `True`, the remaining 50 either fell below this threshold or have missing validation KGE).
+- `tests/test_water_balance.py` — water-balance closure tests.
 
 ## Using your own data
 

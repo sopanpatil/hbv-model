@@ -74,6 +74,9 @@ def _hbv_run_numba(precip, temp, evap,
             recharge = in_soil
         SM += in_soil - recharge
         if SM > FC:
+            # A large input can push SM past FC within one time step;
+            # the excess becomes recharge.
+            recharge += SM - FC
             SM = FC
 
         if SM > LP * FC:
